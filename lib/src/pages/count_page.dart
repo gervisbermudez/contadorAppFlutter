@@ -19,7 +19,7 @@ class _CountPageState extends State<CountPage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             Text(
               "Numero de Clicks",
               style: _textStyle,
@@ -39,18 +39,20 @@ class _CountPageState extends State<CountPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
+        SizedBox(width: 30),
         FloatingActionButton(
           child: Icon(Icons.exposure_zero),
           onPressed: _reset,
         ),
         Expanded(
-          child: SizedBox(
-            width: 5.0,
-          ),
+          child: SizedBox(),
         ),
         FloatingActionButton(
           child: Icon(Icons.remove),
           onPressed: _remove,
+        ),
+        SizedBox(
+          width: 5.0,
         ),
         FloatingActionButton(
           child: Icon(Icons.add),
